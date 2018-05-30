@@ -38,4 +38,24 @@ How to select which attributes are going to be the part of our Model.
     
 2.  Backward Elimination
 
+    Step 1: Define significient level (SL = 0.05)
+
+    Step 2: Use all independent variables to fit the model
+
+    Step 3: Select predictor with highest P-value. 
+            If P > SL, go to next step. Otherwise model is ready.
+
+    Step 4: Remove the predictor. 
     
+    Step 5: Fit model without this variable. 
+
+    Step 6: Go back to step 3. 
+
+3.  Forward Selection
+
+4.  Bidirectional Elimination
+
+5.  All Possible Models (Score Comparision)
+
+
+
