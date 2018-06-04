@@ -1,0 +1,1 @@
+Managed to get to 85.8% using 'rmsprop' optimizer and epoch of 20 000 with batch_size as 1000. This is computationally expensive though.

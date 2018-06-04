@@ -1,0 +1,11 @@
+Confusion Matrix:
+Learned_Classification  acc  good  unacc  vgood
+Actual_Classification                          
+acc                      88    10     41      3
+good                      8     9      9      6
+unacc                    38     0    350      2
+vgood                     6     5      1     12
+
+Error Rate for Sample: 129
+
+Mean Error Rate over 100 samples: 94.97

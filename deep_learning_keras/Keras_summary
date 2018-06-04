@@ -1,0 +1,44 @@
+Summary
+-------
+
+Keras is a library in Python.
+
+It is a library for building deep learning models. 
+
+Keras runs on top of Theano and Tensor flow. 
+
+In machine learning a artificial neuron is an object modeled after a biological neuron. 
+
+A group of artificial neurons is called a neural network. 
+
+Rows are observations. 
+
+Columns are features. 
+
+That thing we are trying to predict is a target variable. 
+
+The data we are going to use to build our model is called training data. 
+
+A very simple neural network has inputs, a hidden layer and outputs. 
+
+When we are working with machine learning models it's important to remember they speak numbers. 
+
+A deep learning model is one with more than one hidden layer. 
+
+
+An random seed is created for reproducability. 
+In supervised machine learning we use a data set. 
+An array is an object that holds stuff. 
+An array in Python only holds numbers. 
+Keep in mind that a Python array starts at 0. 
+We often use an array to hold our data set and to define our target variable. 
+model = Sequential is how we define our model. 
+There are layers of neurons inside that Sequential box that define our neural network. 
+A dense layer is a classic fully connected neural network layer : each input node is connected to each output node.
+The purpose of the activation function is to introduce non-linearity into the network
+Another way to think of it: without a non-linear activation function in the network, a NN, no matter how many layers it had, would behave just like a single-layer perceptron, because summing these layers would give you just another linear function.
+When we compile our models we use either theano or TensorFlow under the hood for efficient numerical computations. 
+Training a network simply means find the best set of weights to make predictions for our problems. 
+Log loss penalizes false classifications. 
+While minimizing log loss we maximize the accuracy of our classifier. 
+An intuitive explanation from an application standpoint is to note that in machine learning cross-entropy is used to predict class probabilities, and MSE to predict values. For example, to predict if a house will be bough by someone over 40 years or below 40 you use cross-entropy. But if you try to predict the age of the buyer, you use MSE
