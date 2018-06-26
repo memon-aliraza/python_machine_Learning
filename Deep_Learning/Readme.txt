@@ -39,11 +39,57 @@ The Activation Function
 
 2. The Sigmoid Function: Specialy useful in output layers if predicting probabilities. 
 
-3. The Rectifier Function: Most popular for neural networks. From 0 to input value gradually progresses. 
+3. The Rectifier Function: Most popular for neural networks. From 0 to input value gradually progresses. It remains zero until some point the shoots up. As in the case of builing, when it reaches up 100 years its demand increases. 
 
 4. Hyperbolic Tangent Function: Simillar to Sigmoid function but it will go below zero (-1 -> 0 -> 1).
 
 How do NNs Work
 ---------------
+
+Why each input is not connected to every hidden layer neuron? The reason could be each input contains different values i.e: zero/non-zero values. Also may be the first neuron in hidden layer is looking for inputs like area and distance from city and not interested into number of bedrooms or the gae of property. 
+
+How do NNs Learn
+----------------
+
+Cost Function: What is the error you have in your prediction and out goal is to minimize the cost function. 
+
+After calculating the cost the details goes back into the neuron and finally weights get updated. The only control we have in NN are the weights.
+
+Gradient Descent
+----------------
+
+Descending into the minimum of the cost function. 
+
+Stochastic Gradient Descent
+---------------------------
+
+In normal we can stuck in local minima and surely will not get the optimal one which is the best. This way we will get part of NN. 
+
+In batch mode we take the whole batch apply to NN and run that. In stochastic we take row by row/mini batch from sample run NN then adjust weight. 
+
+Backpropogation
+---------------
+During process of backpropogation, the way the algorithm is structured we can adjust all the weights at the same time. 
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 

@@ -31,7 +31,7 @@ from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 regressor.fit(X_train, y_train)
 
-# Making predictionsand compare predictions with y_test dataset
+# Making predictions and compare predictions with y_test dataset
 y_predictor = regressor.predict(X_test)
 X_predictor = regressor.predict(X_train)
 
