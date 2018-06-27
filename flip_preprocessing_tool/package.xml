@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>flip_preprocessing_tool</name>
+  <version>0.0.0</version>
+  <description>The flip_preprocessing_tool package</description>
+
+
+  <maintainer email="ali.memon@ibeo-as.com">Ali R. Memon</maintainer>
+
+  <license>Ibeo</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <build_depend>rospy</build_depend>
+  <build_depend>rosbag</build_depend>
+  <build_export_depend>rospy</build_export_depend>
+  <build_export_depend>rosbag</build_export_depend>
+  <exec_depend>rospy</exec_depend>
+  <exec_depend>rosbag</exec_depend>
+
+</package>
