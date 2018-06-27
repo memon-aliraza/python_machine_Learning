@@ -1,15 +1,4 @@
-# Simple Linear Regression Example
-
-# -*- coding: utf-8 -*-
-"""
-Created on Mon Jun 25 15:30:16 2018
-
-@author: Ali R. Memon
-@file:   artificial_NN.py
-@date:   25.05.2018
-"""
-
-# Part 1 - Data Pre-processing # Simple Linear Regression Example
+# Artificial Neural Network
 
 # -*- coding: utf-8 -*-
 """
@@ -49,7 +38,7 @@ X = X[:, 1:13]
 
 # Splitting the dataset
 from sklearn.model_selection import train_test_split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state=0)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.3, random_state=0)
 
 
 # We need to apply Feature Scaling in Artificial Neural Networks
@@ -62,7 +51,6 @@ X_test = sc.transform(X_test)
 # part 2 - Building ANN! 
 
 #Importing ANN libraries
-
 import keras 
 from keras.models import Sequential # initialize neural network
 from keras.layers import Dense # used to create layers in ANN
@@ -79,7 +67,7 @@ classifier.add(Dense(output_dim=6, init='uniform', activation='relu', input_dim 
 
 # Adding second hidden layer. However, we do not need to add more hidden layers for our dataset.
 # But due to deep learning we should have more than 1 hidden layer and also we need to see how to add another.  
-classifier.add(Dense(output_dim=6, init='uniform', activation='relu'))  
+#classifier.add(Dense(output_dim=6, init='uniform', activation='relu'))  
 
 # Adding output layer
 classifier.add(Dense(output_dim=1, init='uniform', activation='sigmoid')) 
@@ -87,8 +75,11 @@ classifier.add(Dense(output_dim=1, init='uniform', activation='sigmoid'))
 # Compiling the ANN (Applying Stochastic Gradient Descent)
 # Optimizer specifies the SGD. There are several SGD methods. 
 # Loss: The SGD is based on loss function. We need to optimize for optimal weights. If dependent variable is binary then binary_ if morethan 2 then category_.
-# 
 classifier.compile(optimizer = 'adam', loss = 'binary_crossentropy',  metrics = ['accuracy'] )
+
+# Fitting ANN to the Training Set
+classifier.fit(X_train, y_train, batch_size=10, epochs=100)
+
 
 # Part 3 - Making Prediction and Model Evaluation
 
@@ -100,4 +91,3 @@ y_pred = (y_pred > 0.5)
 from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test, y_pred)
 
-# (1550 + 175) / 2000 
