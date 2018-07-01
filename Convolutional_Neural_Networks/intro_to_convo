@@ -1,0 +1,63 @@
+Convolutional Neural Networks
+-----------------------------
+
+Black and White Image is 2D array in NN. Every pixel in black and while image has value between 0-255. 0 -> black, 255 -> black.
+
+Color Images: 3D array RGB.
+
+
+Step 1: Convolution (Find features in the image)
+    
+        A combined integration of two functions which shows that how one function modifies other or the shape of other function. 
+ 
+
+Feature Detector or Kernel or Filter = Feature Map / Convolved Feature / Activation Map
+
+    0 0 1
+    1 0 0
+    0 1 1
+
+Make image smaller is the objective of this function. We are loosing some information. 
+
+Features = How we see the image.
+
+Step 1 (b): ReLU (Rectified Linear Units) Layer 
+
+       Usage: To increase non linearty. Images them it self are highly non linear. Function which breaksup the linearity. 
+       When we apply mathematical functions such as convolutions and/or feature detection we might create something linear.  
+
+       White -> Gray -> Black = Linear progression (bright to dark) kind of linear. When we take out black it becomes non linear. 
+
+Step 2: Max Pooling/ Down-sampling 
+    
+        Goal: Recognize objects from different angles. (By capturing distinct features of the object). Preserving features and Reducing size, reducing number of paramenter! -> preventing overfitting.    
+        Max, Min, sum, avg/mean ....., pooling. 
+        
+        
+        Feature Map         Pooled Feature Map (Max Pooling) with 2X2 matrix "not reusing previous cell"
+        -----------         --------------------------------    
+        0 1 0 0 0           1 1 0
+        0 1 1 1 0   ---->   4 2 1
+        1 0 1 2 1           0 2 1
+        1 4 2 1 0
+        0 0 1 2 1
+
+
+        Getting rid of unusable information. 
+
+        Uptill now: Input image -> Convolutional Layer -> Pooling Layer
+
+Step 3: Flattening
+
+        Pooled Feature Map --> arrange rows into columns (A single column) "Input layer of a future ANN"
+        Uptill now: Input image -> Convolutional Layer -> Pooling Layer ->  Flattening.       
+
+Step 4: Full Connection
+    
+        Fully connected layers/hidden layers of special type where each input is connected to every hidden neuron. 
+
+        In ANN we need to optimize the cost function. In CNN along with weights, feature detectors are also adjusted (matrix 3x3).
+
+Softmax and Cross-Entropy
+-------------------------
+       
