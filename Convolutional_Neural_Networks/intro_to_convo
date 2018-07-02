@@ -41,7 +41,7 @@ Step 2: Max Pooling/ Down-sampling
         1 0 1 2 1           0 2 1
         1 4 2 1 0
         0 0 1 2 1
-
+ 
 
         Getting rid of unusable information. 
 
@@ -60,4 +60,11 @@ Step 4: Full Connection
 
 Softmax and Cross-Entropy
 -------------------------
-       
+The output of a NN given image gives let say 95% dog and 5% cat output. How it make a connection between cat and a dog? It is due to softmax layer. It brings output between 0 and 1 and bring the output to 100%. 
+
+
+Classification Error: Did you get right or not (no probabilities).
+
+Mean Square Error: Lower error rate preferable. 
+
+Cross Entropy: Error in percentage. 
