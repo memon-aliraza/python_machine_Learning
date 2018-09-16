@@ -1,7 +1,7 @@
 Convolutional Neural Networks
 -----------------------------
 
-Black and White Image is 2D array in NN. Every pixel in black and while image has value between 0-255. 0 -> black, 255 -> black.
+Black and White Image is 2D array in NN. Every pixel in black and while image has value between 0-255. 0 -> black, 255 -> white.
 
 Color Images: 3D array RGB.
 
